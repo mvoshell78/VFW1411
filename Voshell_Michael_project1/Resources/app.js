@@ -1,5 +1,8 @@
 Ti.UI.setBackgroundColor("000");
-var padding = 30
+var padding = 30;
+var i = 0;
+
+// Vars for views
 
 var winMain = Ti.UI.createWindow({
 	backgroundColor: "#222" 	
@@ -42,11 +45,21 @@ var nextButton = Ti.UI.createView({
 	bottom: padding,
 	right: padding
 });
+
+// vars for text labels
+
 var useless = Ti.UI.createLabel({
 	text: "Useless Facts",
 	color: "#222",
 	font: {fontSize: 30, fontFamily: "ArialRounded"},
 	});
+	
+var useless2 = Ti.UI.createLabel({
+	text: "",
+	color: "#222",
+	font: {fontSize: 30, fontFamily: "ArialRounded"},
+	});
+		
 var previousTxt = Ti.UI.createLabel({
 	text: "Previous",
 	color: "#222",
@@ -57,9 +70,20 @@ var nextTxt = Ti.UI.createLabel({
 	color: "#222",
 	font: {fontsize: 10, fontFamily: "arialRounded"},
 	});
+// var for loading seperate js file
+
+var newTxt = function(){
+	useless2.text = " Useless Facts for everyone";
+};
+
+nextButton.addEventListener("click", newTxt);
+
+
+// main code 
 	
 winMain.add(viewOne, viewTwo, previousButton, nextButton);
 	viewOne.add(useless);
+	viewTwo.add(useless2);
 	previousButton.add(previousTxt);
 	nextButton.add(nextTxt);
 	
