@@ -495,3 +495,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Mich/.ec
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
 !SUBENTRY 1 org.eclipse.ui 2 0 2014-10-29 13:48:38.271
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-29 14:11:46.587
+!MESSAGE NLS missing message: HttpServerSettingsTab_Title in: com.aptana.js.debug.ui.internal.launchConfigurations.messages
