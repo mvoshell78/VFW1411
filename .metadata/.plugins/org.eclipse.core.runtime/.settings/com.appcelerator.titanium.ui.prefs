@@ -1,7 +1,7 @@
 =run
-LAST_LAUNCH_TIMESTAMP=1414529340439
+LAST_LAUNCH_TIMESTAMP=1414531129861
 Project\ 1\:launchMode=run
-Project\ 1\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
+Project\ 1\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.simulator.launchShortcut.titanium_1_WVGA800
 autoLaunchShortcut=false
 eclipse.preferences.version=1
 preference.show.console.onError=true
