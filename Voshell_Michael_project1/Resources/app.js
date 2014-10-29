@@ -1,6 +1,7 @@
 Ti.UI.setBackgroundColor("000");
 var padding = 30;
 var i = 0;
+var uselessFactsArray = ["The average life of a taste bud is 10 days.", "In 1980, a Las Vegas hospital suspended workers for betting on when patients would die.", "Dibble means to drink like a duck.","It was once against the law to have a pet dog in a city in Iceland."];
 
 // Vars for views
 
@@ -22,9 +23,8 @@ var viewTwo = Ti.UI.createView({
 	borderRadius: 10,
 	borderWidth: 2,
 	width: 325,
-	height: 100,
-	// need to replace heightof 100 when text has been added 
-	//height: Ti.Ui.size,
+	height: 150,
+	//height: Ti.Ui.SIZE,
 	top: padding + viewOne.height + padding 	
 });	
 
@@ -73,11 +73,17 @@ var nextTxt = Ti.UI.createLabel({
 // var for loading seperate js file
 
 var newTxt = function(){
-	useless2.text = " Useless Facts for everyone";
+	i++;
+	useless2.text = uselessFactsArray[i];
+};
+
+var preTxt = function(){
+	i--;
+	useless2.text = uselessFactsArray[i] ;
 };
 
 nextButton.addEventListener("click", newTxt);
-
+previousButton.addEventListener("click", preTxt);
 
 // main code 
 	
