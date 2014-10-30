@@ -1,7 +1,7 @@
 Ti.UI.setBackgroundColor("000");
 var padding = 30;
 var i = 0;
-var uselessFactsArray = ["The average life of a taste bud is 10 days.", "In 1980, a Las Vegas hospital suspended workers for betting on when patients would die.", "Dibble means to drink like a duck.","It was once against the law to have a pet dog in a city in Iceland."];
+var uselessFactsArray = ["The average life of a taste bud is 10 days.", "In 1980, a Las Vegas hospital suspended workers for betting on when patients would die.", "Dibble means to drink like a duck.","It was once against the law to have a pet dog in a city in Iceland.","A B-25 bomber crashed into the 79th floor of the Empire State Building on July 28, 1945."];
 
 // Vars for views
 
@@ -70,17 +70,23 @@ var nextTxt = Ti.UI.createLabel({
 	color: "#222",
 	font: {fontsize: 10, fontFamily: "arialRounded"},
 	});
-// var for loading seperate js file
 
 var newTxt = function(){
-	i++;
-	useless2.text = uselessFactsArray[i];
-};
+	if (i >= uselessFactsArray.length) {
+		i = 0;
+		}
+			useless2.text = uselessFactsArray[i];
+			i++;
+	};
 
 var preTxt = function(){
-	i--;
-	useless2.text = uselessFactsArray[i] ;
-};
+	if (i < 0) {
+		i = uselessFactsArray.length - 1;
+		}
+			useless2.text = uselessFactsArray[i];
+			i--;
+	
+	};
 
 nextButton.addEventListener("click", newTxt);
 previousButton.addEventListener("click", preTxt);
@@ -94,4 +100,3 @@ winMain.add(viewOne, viewTwo, previousButton, nextButton);
 	nextButton.add(nextTxt);
 	
 winMain.open();
-
