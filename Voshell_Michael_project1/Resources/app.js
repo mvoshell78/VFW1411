@@ -1,18 +1,15 @@
-Ti.UI.setBackgroundColor("000");
+Ti.UI.setBackgroundColor("#fff");
 var padding = 30;
 var i = 0;
 
 // Vars for views
 
 var winMain = Ti.UI.createWindow({
-	backgroundColor: "#222" 	
+	backgroundColor: "#fff" 	
 });
 
 var viewOne = Ti.UI.createView({
 	backgroundColor: "red",
-	borderRadius: 10,
-	borderWidth: 2,
-	width: 300,
 	height: 100,
 	top: padding
 	});
@@ -20,10 +17,8 @@ var viewOne = Ti.UI.createView({
 var viewTwo = Ti.UI.createView({
 	backgroundColor: "green",
 	borderRadius: 10,
-	borderWidth: 2,
 	width: 325,
-	height: 150,
-	//height: Ti.Ui.SIZE,
+	height: 200,
 	top: padding + viewOne.height + padding 	
 });	
 
@@ -56,6 +51,10 @@ var useless = Ti.UI.createLabel({
 var useless2 = Ti.UI.createLabel({
 	text: "",
 	color: "#222",
+	right: 10,
+	left: 20,
+	top: 10,
+	bottom: 10,
 	font: {fontSize: 30, fontFamily: "ArialRounded"},
 	});
 		
