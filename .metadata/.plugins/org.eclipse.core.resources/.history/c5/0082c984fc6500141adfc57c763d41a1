@@ -1,0 +1,3 @@
+// json data
+
+var familyInfo =[{title:Mich}, {title: Diana}, {title: Michael}, {title: Korin}, {title: Azsaleigh}];

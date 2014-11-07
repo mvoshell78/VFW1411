@@ -791,3 +791,6 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 
 !ENTRY org.eclipse.core.resources 4 567 2014-11-05 21:33:06.073
 !MESSAGE The project description file (.project) for 'Voshell_Michael_project2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY com.appcelerator.titanium.core 4 0 2014-11-06 22:14:29.559
+!MESSAGE (Build 3.4.0.201409261227) [ERROR]  Error cleaning the project. A manual clean will be performed.

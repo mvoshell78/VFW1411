@@ -1,0 +1,34 @@
+Ti.UI.setBackgroundColor("#fff");
+
+
+// Var for windows one and two
+var title = Ti.UI.createView({
+	backgroundColor:  "#fff",
+	height: 50,
+	top: 0
+	});
+	
+var border = Ti.UI.createView({
+	backgroundColor:"red",
+	height: 5,
+	top: title.height + title.top
+	});
+	
+var titleLabel = Ti.UI.createLabel({
+	text: "I am the Title",
+	font: {fontSize: 35, fontFamily: "hevetical", fontWeigth: "bold"},
+	top: 15,
+	});
+	
+var winOne = Ti.UI.createWindow({
+	backgroundColor: "#fff" 	
+});
+
+var winTwo = Ti.UI.createWindow({
+	backgroundColor: "#999" 	
+});
+
+// main code 
+winOne.open(title, border);
+	title.add(titleLabel);
+
