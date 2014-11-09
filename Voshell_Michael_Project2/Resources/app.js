@@ -35,10 +35,6 @@ var familyInfo = {
 				}
 			};
 					
-console.log(familyInfo.kids.headtitle);
-console.log(familyInfo.adults.headtitle);
-console.log(familyInfo.adults.parents[0].names);
-console.log(familyInfo.adults.parents[1].names);
 
 // Title for 1st window
 
@@ -106,17 +102,35 @@ var getDescription = function(){
 		font: {fontSize: 35, fontFamily: "hevetical", fontWeigth: "bold"},
 		top: 15,
 		});	
-			
-		winTwo.add(title, border);
-		title.add(titleLabel);
+	var desctxt = Ti.UI.createLabel({
+		text: this.desc,
+		font: {fontSize: 20, fontFamily: "hevetical"},
+		top: title.height + title.top + 30,
+		left:20
+		});
+	var backButton = Ti.UI.createLabel({
+		text: "Back",
+		font: {fontSize: 12, fontfamily: "hevetical" },
+		color: "blue",
+		left: 10
+		});
+		
+	var closeWindow = function(){
+		winTwo.close();
+		};
+		backButton.addEventListener("click",closeWindow);	
+		winTwo.add(title, border, desctxt);
+		title.add(titleLabel, backButton);
 		winTwo.open();
 		};	
+	
 
 // useing a for loop to add individul peices [i] to the sections 
 for (i = 0, j = familyInfo.adults.parents.length; i<j; i++){
 	console.log(familyInfo.adults.parents[i] );
 	var rows = Ti.UI.createTableViewRow({
 		title: familyInfo.adults.parents[i].names,
+		desc: familyInfo.adults.parents[i].description,
 		hasChild: true
 	});
 	// hasDetail is IOS Specific
@@ -132,6 +146,7 @@ for (i = 0, j = familyInfo.kids.children.length; i<j; i++){
 	
 	var rows = Ti.UI.createTableViewRow({
 		title: familyInfo.kids.children[i].names,
+		desc: familyInfo.kids.children[i].description,
 		hasChild: true
 	});
 	// hasDetail is IOS Specific
