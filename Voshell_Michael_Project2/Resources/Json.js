@@ -8,10 +8,10 @@ var familyInfo = {
 			[
 				{
 					"names": "Mich", 
-				  	"description": "Mich is the dad"
+				  	"description": "Mich is 36 years old, He works for Schwans Home Service and is a student at Fullsail University. He has been married to Diana for 12 years in January! "
 				},
 				{	"names": "Diana", 
-				  	"description": "Diana is the mom"
+				  	"description": "Diana is 37 years old, After 6 years working for the State of Delaware has decided to go back to school and is a fulltime student at Harris school of buisness."
 				} 
 			]
 		},
@@ -23,18 +23,33 @@ var familyInfo = {
 			[
 				{
 					"names": "Michael", 
-					"description": "Michael is the oldest child"
+					"description": "Michael is 19 years old. He has worked for Yenser builders for two years and is a part time student. He would like to be a Police Officer, and is applying in the Spring."
 				},
 				{
 					"names": "Korin", 
-					"description" : "Korin is the oldest daughter"
+					"description" : "Korin is 17 years old and is a full time student at Dover High School. She is active in extra curricular activities such as drum line and soccer."
 				},
 				{
 					"names": "Azsaleigh", 
-					"description" : " Azsa is the baby"}]
+					"description" : " Azsa is 14 years old and is a full time student at Central Middle School. In a few years she hopes to follow her dad and go to FullSail!"}]
 				}
 			};
-					
+			
+
+
+//creating table
+// titles pulled from json data
+var parentsSection = Ti.UI.createTableViewSection({
+	headerTitle: familyInfo.adults.headtitle,
+	footerTitle: familyInfo.adults.footertitle,
+	});
+	
+var childrenSection = Ti.UI.createTableViewSection({
+	headerTitle: familyInfo.kids.headtitle,
+	footerTitle: familyInfo.kids.footertitle,
+	});	
+	
+
 // funtion for clicking the rows 
 // takes you to a new window with a similar looking title 
 // second window
@@ -83,3 +98,45 @@ var getDescription = function(){
 		title.add(titleLabel, backButton);
 		winTwo.open();
 		};	
+	
+
+// useing a for loop to add individul peices [i] to the sections 
+for (i = 0, j = familyInfo.adults.parents.length; i<j; i++){
+	console.log(familyInfo.adults.parents[i] );
+	var rows = Ti.UI.createTableViewRow({
+		title: familyInfo.adults.parents[i].names,
+		desc: familyInfo.adults.parents[i].description,
+		hasChild: true
+	});
+	// hasDetail is IOS Specific
+	if(Ti.Platform.name === "iPhone OS"){
+	rows.hasChild = false;
+	rows.hasDetail = true;
+	}
+	parentsSection.add(rows);
+	rows.addEventListener("click", getDescription);
+};
+
+for (i = 0, j = familyInfo.kids.children.length; i<j; i++){
+	
+	var rows = Ti.UI.createTableViewRow({
+		title: familyInfo.kids.children[i].names,
+		desc: familyInfo.kids.children[i].description,
+		hasChild: true
+	});
+	// hasDetail is IOS Specific
+	if(Ti.Platform.name === "iPhone OS"){
+	rows.hasChild = false;
+	rows.hasDetail = true;
+	}
+	childrenSection.add(rows);
+	rows.addEventListener("click", getDescription);
+};
+var allSection = [parentsSection, childrenSection];
+// adding data to the table 
+names.setData(allSection);
+
+// conditional to use grouped for IOS
+if(Ti.Platform.name === "iPhone OS"){
+	names.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+}
