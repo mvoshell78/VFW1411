@@ -8,10 +8,10 @@ var familyInfo = {
 			[
 				{
 					"names": "Mich", 
-				  	"description": "Mich is the dad"
+				  	"description": "Mich is 36 years old, He works for Schwans Home Service and is a student at Fullsail University. He has been married to Diana for 12 years in January! "
 				},
 				{	"names": "Diana", 
-				  	"description": "Diana is the mom"
+				  	"description": "Diana is 37 years old, After 6 years working for the State of Delaware has decided to go back to school and is a fulltime student at Harris school of buisness."
 				} 
 			]
 		},
@@ -23,15 +23,15 @@ var familyInfo = {
 			[
 				{
 					"names": "Michael", 
-					"description": "Michael is the oldest child"
+					"description": "Michael is 19 years old. He has worked for Yenser builders for two years and is a part time student. He would like to be a Police Officer, and is applying in the Spring."
 				},
 				{
 					"names": "Korin", 
-					"description" : "Korin is the oldest daughter"
+					"description" : "Korin is 17 years old and is a full time student at Dover High School. She is active in extra curricular activities such as drum line and soccer."
 				},
 				{
 					"names": "Azsaleigh", 
-					"description" : " Azsa is the baby"}]
+					"description" : " Azsa is 14 years old and is a full time student at Central Middle School. In a few years she hopes to follow her dad and go to FullSail!"}]
 				}
 			};
 					
