@@ -820,3 +820,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Mich/.ec
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
 !SUBENTRY 1 org.eclipse.ui 2 0 2014-11-08 19:29:43.429
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY com.appcelerator.titanium.core 4 0 2014-11-08 22:23:47.359
+!MESSAGE (Build 3.4.0.201409261227) [ERROR]  Error cleaning the project. A manual clean will be performed.
