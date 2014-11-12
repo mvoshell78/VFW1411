@@ -1,0 +1,32 @@
+Ti.UI.setBackgroundColor("#fff");
+
+var winOne = Ti.UI.createWindow({
+	backgroundColor: "#FBFBFB",
+	});
+var winTwo = Ti.UI.createWindow({
+	backgroundColor: "#E0E6F5"
+	});
+var openView = Ti.UI.createView({
+	backgroundColor: "#E0E6F5",
+	border: 1,
+	borderRadius: 10,
+	width:300,
+	top: 300,
+	height: 35
+	
+});
+
+var openTxt = Ti.UI.createLabel({
+	text: "Click to open image gallery"
+});
+
+var galleryOpen = function(){
+  //	winOne.close();
+  	winTwo.open();
+};
+
+
+	winOne.add(openView);
+	openView.add(openTxt);
+	openView.addEventListener("click", galleryOpen);
+	winOne.open(); 

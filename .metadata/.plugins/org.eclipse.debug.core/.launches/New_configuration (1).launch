@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.simulator.launchConfigurationType">
 <booleanAttribute key="ATTR_CLEAN_BEFORE_LAUNCH" value="true"/>
-<stringAttribute key="ATTR_PROJECT_NAME" value="Voshell_Michael_Project2"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value="Voshell_Michael_Project3"/>
 <stringAttribute key="device_id" value="CEE14CF2-491A-4F50-926A-1AE3FD514C1B"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/Voshell_Michael_Project2"/>
+<listEntry value="/Voshell_Michael_Project3"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
