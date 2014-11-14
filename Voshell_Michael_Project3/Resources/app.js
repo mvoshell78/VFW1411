@@ -2,7 +2,6 @@ Ti.UI.setBackgroundColor("#fff");
 // needed to get files for application
 var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
 var imageFiles = imagesFolder.getDirectoryListing();
-console.log(imageFiles);
 // var to determine height and width of device
 var pageWidth = Ti.Platform.displayCaps.platformWidth;
 var pageHeight = Ti.Platform.displayCaps.platformHeight;
@@ -10,14 +9,11 @@ var boxCount = 4;
 var margin = pageWidth * .04; // multipling .07 makes margin relitive to device size
 var boxWidth =  pageWidth - ((boxCount + 1) * margin);
 var boxSize = boxWidth/ boxCount;
-console.log(pageWidth, boxWidth, boxSize, margin);
-
 
 			
 var winOne = Ti.UI.createWindow({
 	backgroundColor: "fff"
 	});
-
 var openView = Ti.UI.createView({
 	backgroundColor: "red",
 	border: 1,
@@ -26,7 +22,6 @@ var openView = Ti.UI.createView({
 	top: pageHeight/2,// to display about center of the device
 	height: 35
 	});
-
 var openTxt = Ti.UI.createLabel({
 	text: "Click to open image gallery"
 });
@@ -38,7 +33,7 @@ var winTwo = Ti.UI.createWindow({
 var border = Ti.UI.createView({
 	height: 1,
 	width: pageWidth,
-	top: 20
+	top: 10
 });
 var container = Ti.UI.createScrollView({
 	layout: "horizontal",
@@ -48,8 +43,34 @@ var container = Ti.UI.createScrollView({
 	showVerticalScrollIndicator: true,// needed to show scroll indicator
 	top: 0
 });
+
+var winThree = Ti.UI.createWindow({
+	backgroundColor:"#E0E6F5"
+});
+
+
+var back = Ti.UI.createLabel({
+	text: "Back",
+	color: "blue",
+	font: {fontSize: 12, fontfamily: "hevetical" },
+	left: 10,
+	top: 20,
+});
+var back2 = Ti.UI.createLabel({
+	text: "Back",
+	color: "blue",
+	font: {fontSize: 12, fontfamily: "hevetical" },
+	left: 10,
+	top: 20,
+});
+var closeWindowTwo = function(){
+	winTwo.close();
+};
+var closeWindowThree = function(){
+	winThree.close();
+};
 var galleryOpen = function(){
-	winOne.close();
+	//winOne.close();
 	
 
  	for (i=0; i< imageFiles.length; i++){	
@@ -73,7 +94,24 @@ var galleryOpen = function(){
 	container.add(newView);
 	};
 		
-		winTwo.add(border, container);
+	// event propagation ~ taking an event listener and adding it to the parent object
+	// one listener to simplify code
+	container.addEventListener("click",function(event){
+	
+			var fullImage = Ti.UI.createImageView({
+				image: event.source.image
+				});
+			var fullImageTxt = Ti.UI.createLabel({
+				text: event.source.image, 
+				top: 20,
+				font: {fontSize: 15, fontFamily: "ArialRounded"}
+				
+			});
+				winThree.add(fullImage, fullImageTxt, back2);
+				winThree.open();
+		});
+		
+		winTwo.add(back, border, container);
 		winTwo.open();	
 };
 
@@ -81,4 +119,6 @@ var galleryOpen = function(){
 	winOne.add(openView);
 	openView.add(openTxt);
 	openView.addEventListener("click", galleryOpen);
+	back.addEventListener("click",closeWindowTwo);
+	back2.addEventListener("click",closeWindowThree);
 	winOne.open(); 

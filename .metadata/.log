@@ -1311,3 +1311,9 @@ java.net.BindException: Address already in use
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-11-13 22:13:00.325
+!MESSAGE Extension version: 3.4.0; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-11-13 22:54:27.782
+!MESSAGE Extension version: 3.4.0; protocol v2
