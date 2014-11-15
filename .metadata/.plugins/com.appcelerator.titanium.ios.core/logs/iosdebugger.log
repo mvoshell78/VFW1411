@@ -1,36 +1,47 @@
-Logger started at: Saturday, November 15, 2014 12:11:48 AM EST
+Logger started at: Saturday, November 15, 2014 6:42:33 PM EST
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1411756658
-[11:48.460] Sent: >21*1416028308461*version<
-[11:48.461] Recv: >1416028308461*2*3.4.0<
-[11:48.463] Sent: >36*1416028308462*option*monitorXHR*true<
-[11:48.463] Recv: >1416028308462<
-[11:48.463] Sent: >45*1416028308463*option*stepFiltersEnabled*false<
-[11:48.465] Recv: >1416028308463<
-[11:48.466] Sent: >45*1416028308464*option*suspendOnFirstLine*false<
-[11:48.466] Recv: >1416028308464<
-[11:48.466] Sent: >46*1416028308465*option*suspendOnExceptions*false<
-[11:48.466] Recv: >1416028308465<
-[11:48.467] Sent: >41*1416028308466*option*suspendOnErrors*true<
-[11:48.467] Recv: >1416028308466<
-[11:48.467] Sent: >43*1416028308467*option*suspendOnKeywords*true<
-[11:48.467] Recv: >1416028308467<
-[11:48.467] Sent: >45*1416028308468*option*bypassConstructors*false<
-[11:48.468] Recv: >1416028308468<
-[11:48.468] Sent: >45*1416028308469*option*stepFiltersEnabled*false<
-[11:48.468] Recv: >1416028308469<
-[11:48.468] Sent: >30*1416028308470*detailFormatters<
-[11:48.468] Recv: >1416028308470<
-[11:48.468] Sent: >20*1416028308471*enable<
-[11:48.469] Recv: >1416028308471<
-[11:48.471] Recv: >threads*created*0*kroll$1<
-[11:48.475] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6DF51A0C-4328-428C-B4DA-2CDD716FDD0A/Voshell_Michael_Project3.app/app.js, Resource: app_js<
-[11:48.475] Recv: >scripts*created*298326400|app:/app.js||1|132<
-[11:48.476] Recv: >resumed*0*started<
-[11:48.479] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6DF51A0C-4328-428C-B4DA-2CDD716FDD0A/Voshell_Michael_Project3.app/_app_props_.json, Resource: _app_props__json<
-[11:48.522] Recv: >log*out*[DEBUG] Application booted in 151.250958 ms<
-[11:52.981] Recv: >log*out*[INFO] images/Mt_Top_View.jpg<
-[11:52.982] Recv: >suspended*0*exception*app:/app.js*113<
-[11:52.983] Sent: >22*1416028308472*frames*0<
-[11:52.984] Recv: >1416028308472*0||imageSource|app:/app.js|113|false|0|0*1||event|app:/app.js|128|false|0|0<
+[42:33.66] Sent: >21*1416094953063*version<
+[42:33.67] Recv: >1416094953063*2*3.4.0<
+[42:33.77] Sent: >20*1416094953064*update<
+[42:33.77] Recv: >1416094953064*3.4.0<
+[42:33.77] Sent: >45*1416094953065*option*stepFiltersEnabled*false<
+[42:33.78] Recv: >1416094953065<
+[42:33.78] Sent: >36*1416094953066*option*monitorXHR*true<
+[42:33.79] Recv: >1416094953066<
+[42:33.79] Sent: >45*1416094953067*option*suspendOnFirstLine*false<
+[42:33.79] Recv: >1416094953067<
+[42:33.79] Sent: >46*1416094953068*option*suspendOnExceptions*false<
+[42:33.80] Recv: >1416094953068<
+[42:33.80] Sent: >41*1416094953069*option*suspendOnErrors*true<
+[42:33.80] Recv: >1416094953069<
+[42:33.81] Sent: >43*1416094953070*option*suspendOnKeywords*true<
+[42:33.81] Recv: >1416094953070<
+[42:33.81] Sent: >45*1416094953071*option*bypassConstructors*false<
+[42:33.82] Recv: >1416094953071<
+[42:33.82] Sent: >45*1416094953072*option*stepFiltersEnabled*false<
+[42:33.82] Recv: >1416094953072<
+[42:33.82] Sent: >30*1416094953073*detailFormatters<
+[42:33.83] Recv: >1416094953073<
+[42:33.83] Sent: >20*1416094953074*enable<
+[42:33.83] Recv: >1416094953074<
+[42:33.86] Recv: >threads*created*0*kroll$1<
+[42:33.90] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6F8A351C-03AB-4A41-980E-F40562DE2178/Voshell_Michael_Project3.app/app.js, Resource: app_js<
+[42:33.91] Recv: >scripts*created*298432960|app:/app.js||1|43<
+[42:33.92] Recv: >resumed*0*started<
+[42:33.93] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6F8A351C-03AB-4A41-980E-F40562DE2178/Voshell_Michael_Project3.app/_app_props_.json, Resource: _app_props__json<
+[42:33.94] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6F8A351C-03AB-4A41-980E-F40562DE2178/Voshell_Michael_Project3.app/gallery.js, Resource: gallery_js<
+[42:33.95] Recv: >scripts*created*298432800|app:/gallery.js||1|109<
+[42:33.144] Recv: >log*out*[DEBUG] Application booted in 205.841005 ms<
+[42:34.396] Recv: >log*out*[object TiUILabel]<
+[42:37.123] Recv: >log*out*[INFO] <null><
+[42:40.434] Recv: >log*out*[INFO] <null><
+[42:42.268] Recv: >log*out*[INFO] Window is not open. Ignoring this close call<
+[42:43.560] Recv: >log*out*[INFO] <null><
+[42:50.411] Recv: >log*out*[INFO] Window is not open. Ignoring this close call<
+[42:50.412] Recv: >log*out*[INFO] Window is not open. Ignoring this close call<
+[42:51.530] Recv: >log*out*[INFO] <null><
+[42:51.530] Recv: >suspended*0*exception*app:/gallery.js*80<
+[42:51.533] Sent: >22*1416094953075*frames*0<
+[42:51.534] Recv: >1416094953075*0||imageSource|app:/gallery.js|80|false|0|0*1||event|app:/gallery.js|105|false|0|0<
 ----------End of file----------
