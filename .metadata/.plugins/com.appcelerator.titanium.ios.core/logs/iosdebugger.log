@@ -1,32 +1,36 @@
-Logger started at: Thursday, November 13, 2014 10:54:27 PM EST
+Logger started at: Saturday, November 15, 2014 12:11:48 AM EST
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1411756658
-[54:27.781] Sent: >21*1415937267780*version<
-[54:27.782] Recv: >1415937267780*2*3.4.0<
-[54:27.784] Sent: >45*1415937267781*option*stepFiltersEnabled*false<
-[54:27.785] Recv: >1415937267781<
-[54:27.785] Sent: >36*1415937267782*option*monitorXHR*true<
-[54:27.785] Recv: >1415937267782<
-[54:27.786] Sent: >45*1415937267783*option*suspendOnFirstLine*false<
-[54:27.786] Recv: >1415937267783<
-[54:27.786] Sent: >46*1415937267784*option*suspendOnExceptions*false<
-[54:27.787] Recv: >1415937267784<
-[54:27.787] Sent: >41*1415937267785*option*suspendOnErrors*true<
-[54:27.787] Recv: >1415937267785<
-[54:27.788] Sent: >43*1415937267786*option*suspendOnKeywords*true<
-[54:27.788] Recv: >1415937267786<
-[54:27.788] Sent: >45*1415937267787*option*bypassConstructors*false<
-[54:27.788] Recv: >1415937267787<
-[54:27.789] Sent: >45*1415937267788*option*stepFiltersEnabled*false<
-[54:27.789] Recv: >1415937267788<
-[54:27.789] Sent: >30*1415937267789*detailFormatters<
-[54:27.789] Recv: >1415937267789<
-[54:27.789] Sent: >20*1415937267790*enable<
-[54:27.790] Recv: >1415937267790<
-[54:27.792] Recv: >threads*created*0*kroll$1<
-[54:27.797] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/B754D01A-208C-4C5F-A009-C001D12561AD/Voshell_Michael_Project3.app/app.js, Resource: app_js<
-[54:27.798] Recv: >scripts*created*298408320|app:/app.js||1|111<
-[54:27.798] Recv: >resumed*0*started<
-[54:27.800] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/B754D01A-208C-4C5F-A009-C001D12561AD/Voshell_Michael_Project3.app/_app_props_.json, Resource: _app_props__json<
-[54:27.849] Recv: >log*out*[DEBUG] Application booted in 163.504958 ms<
+[11:48.460] Sent: >21*1416028308461*version<
+[11:48.461] Recv: >1416028308461*2*3.4.0<
+[11:48.463] Sent: >36*1416028308462*option*monitorXHR*true<
+[11:48.463] Recv: >1416028308462<
+[11:48.463] Sent: >45*1416028308463*option*stepFiltersEnabled*false<
+[11:48.465] Recv: >1416028308463<
+[11:48.466] Sent: >45*1416028308464*option*suspendOnFirstLine*false<
+[11:48.466] Recv: >1416028308464<
+[11:48.466] Sent: >46*1416028308465*option*suspendOnExceptions*false<
+[11:48.466] Recv: >1416028308465<
+[11:48.467] Sent: >41*1416028308466*option*suspendOnErrors*true<
+[11:48.467] Recv: >1416028308466<
+[11:48.467] Sent: >43*1416028308467*option*suspendOnKeywords*true<
+[11:48.467] Recv: >1416028308467<
+[11:48.467] Sent: >45*1416028308468*option*bypassConstructors*false<
+[11:48.468] Recv: >1416028308468<
+[11:48.468] Sent: >45*1416028308469*option*stepFiltersEnabled*false<
+[11:48.468] Recv: >1416028308469<
+[11:48.468] Sent: >30*1416028308470*detailFormatters<
+[11:48.468] Recv: >1416028308470<
+[11:48.468] Sent: >20*1416028308471*enable<
+[11:48.469] Recv: >1416028308471<
+[11:48.471] Recv: >threads*created*0*kroll$1<
+[11:48.475] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6DF51A0C-4328-428C-B4DA-2CDD716FDD0A/Voshell_Michael_Project3.app/app.js, Resource: app_js<
+[11:48.475] Recv: >scripts*created*298326400|app:/app.js||1|132<
+[11:48.476] Recv: >resumed*0*started<
+[11:48.479] Recv: >log*out*[DEBUG] Loading: /Users/Mich/Library/Developer/CoreSimulator/Devices/FB81DA09-05CD-4591-95F7-1B23E71E6DE9/data/Containers/Bundle/Application/6DF51A0C-4328-428C-B4DA-2CDD716FDD0A/Voshell_Michael_Project3.app/_app_props_.json, Resource: _app_props__json<
+[11:48.522] Recv: >log*out*[DEBUG] Application booted in 151.250958 ms<
+[11:52.981] Recv: >log*out*[INFO] images/Mt_Top_View.jpg<
+[11:52.982] Recv: >suspended*0*exception*app:/app.js*113<
+[11:52.983] Sent: >22*1416028308472*frames*0<
+[11:52.984] Recv: >1416028308472*0||imageSource|app:/app.js|113|false|0|0*1||event|app:/app.js|128|false|0|0<
 ----------End of file----------
