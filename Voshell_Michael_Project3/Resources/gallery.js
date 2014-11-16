@@ -7,6 +7,7 @@ var back = Ti.UI.createLabel({
 	left: 10,
 	top: 20,
 });
+
 var back2 = Ti.UI.createLabel({
 	text: "Back",
 	color: "blue",
@@ -19,7 +20,7 @@ var back2 = Ti.UI.createLabel({
 var winTwo = Ti.UI.createWindow({
 	backgroundColor: "#E0E6F5",
 	layout: "horizontal"
-	});
+});
 	
 var container = Ti.UI.createScrollView({
 	layout: "horizontal",
@@ -82,7 +83,7 @@ var fullWindow = function(imageSource){
 			var picTitle = (imageSource.substr(7));
 			var fullImageTxt = Ti.UI.createLabel({
 				text: picTitle,
-				top: titleHeight + 10,
+				top: titleHeight,
 				font: {fontSize: 15, fontFamily: "ArialRounded"}
 				});
 				
@@ -97,7 +98,6 @@ var fullWindow = function(imageSource){
 	
 	
 winOne.addEventListener("click",function(event){
-	console.log(event.source);
 	galleryOpen(event.source);
 });	
 

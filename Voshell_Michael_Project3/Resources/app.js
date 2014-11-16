@@ -6,12 +6,12 @@ var imageFiles = imagesFolder.getDirectoryListing();
 var pageWidth = Ti.Platform.displayCaps.platformWidth;
 var pageHeight = Ti.Platform.displayCaps.platformHeight;
 var boxCount = 4;
-var margin = pageWidth * .01; // multipling .07 makes margin relitive to device size
+var margin = pageWidth * .01; // multipling .01 makes margin relitive to device size
 var boxWidth =  pageWidth - ((boxCount + 1) * margin);
 var boxSize = boxWidth/ boxCount;
 
-var titleHeight = pageHeight / 14 ;	
-console.log(pageHeight, titleHeight);
+var titleHeight = pageHeight / 12 ;	
+
 		
 var winOne = Ti.UI.createWindow({
 	backgroundColor: "#E0E6F5"
@@ -31,13 +31,12 @@ var title = Ti.UI.createView({
 	backgroundColor :"#f4f4fb",
 	top: 0,
 	height: titleHeight
-	
 });
-var titleTxt = Ti.UI.createLabel({
+	var titleTxt = Ti.UI.createLabel({
 	text: "Voshell",
-	font: {fontSize: 20, fontfamily: "hevetical" },
-	top: 20
-});
+		font: {fontSize: 20, fontfamily: "hevetical" },
+		top: 20
+	});
 
 var border = Ti.UI.createView({
 	height: 1,
@@ -48,6 +47,7 @@ var border = Ti.UI.createView({
 
 
 	var loadFile = require("gallery");
+	
 	winOne.add(title, openView );
 	openView.add(openTxt);
 	title.add(titleTxt);
