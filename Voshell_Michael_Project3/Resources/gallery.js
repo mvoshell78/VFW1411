@@ -55,8 +55,10 @@ var galleryOpen = function(source){
 	newView.add(thumbnail);
 	container.add(newView);
 	};
-	winTwo.add(back, border, container);
+	
+	winTwo.add(title, border, container);
 		winTwo.open();	
+		title.add(back);
 } else {
 
 };
@@ -80,11 +82,11 @@ var fullWindow = function(imageSource){
 			var picTitle = (imageSource.substr(7));
 			var fullImageTxt = Ti.UI.createLabel({
 				text: picTitle,
-				top: 40,
+				top: titleHeight + 10,
 				font: {fontSize: 15, fontFamily: "ArialRounded"}
 				});
 				
-				winThree.add(fullImage, fullImageTxt, back2);
+				winThree.add( fullImage, fullImageTxt, back2);
 				winThree.open();
 
 	var closeWindowThree = function(){
