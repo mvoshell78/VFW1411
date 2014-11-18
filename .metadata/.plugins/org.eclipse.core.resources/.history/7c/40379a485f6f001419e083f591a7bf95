@@ -1,0 +1,14 @@
+//Ti.UI.setBackgroundColor("#black");
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: ("#fff"),
+	opacity: ".8"
+});
+
+
+
+
+
+
+
+mainWindow.open();
