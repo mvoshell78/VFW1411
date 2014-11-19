@@ -30,19 +30,22 @@ var optionOne = Ti.UI.createView({
 	top: titleBlock.height
 });
 var optionOneTxt = Ti.UI.createLabel({
-	text: " I am option one",
-	font: {fontSize: 35, fontFamily: "Baskerville", fontStyle: "italic"},
+	text: "Photo Gallery",
+	label: "1",
+	font: {fontSize: 25, fontFamily: "Baskerville", fontStyle: "italic"},
 	bottom: 5,
 	left: 5
 });
 var optionTwoTxt = Ti.UI.createLabel({
 	text: " I am option two",
+	label: "2",
 	font: {fontSize: 35, fontFamily: "Baskerville", fontStyle: "italic"  },
 	bottom: 5,
 	left: 5
 });
 var optionThreeTxt = Ti.UI.createLabel({
 	text: " I am option three",
+	label: "3",
 	font: {fontSize: 35, fontFamily: "Baskerville", fontStyle: "italic" },
 	bottom: 5,
 	left: 5
@@ -54,14 +57,24 @@ var optionTwo = Ti.UI.createView({
 });
 var optionThree = Ti.UI.createView({
 	backgroundColor: ("#463CB4"),
-	label: optionThree,
 	height: boxSize,
 	top: titleBlock.height + optionOne.height + optionTwo.height
 });
+
+var galleryWin = Ti.UI.createWindow({
+	backgroundColor: "#fff",
+	});
+
 mainWindow.add(titleBlock, border, optionOne, optionTwo, optionThree);
 mainWindow.addEventListener("click",function(event){
-	console.log(event.source.view);
+	console.log(event.source.label);
+	if (event.source.label === "1"){
+		
+		galleryWin.open();
+
+	};
 });
+var loadImageGallery = require("imagegallery");
 
 optionOne.add(optionOneTxt);
 optionTwo.add(optionTwoTxt);

@@ -1,0 +1,43 @@
+var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imagesFolder.getDirectoryListing();
+var i = [Math.floor(Math.random()*imageFiles.length)];
+Ti.UI.setBackgroundColor ("#fff");
+var photo =Ti.UI.createImageView({
+		image: "images/" + imageFiles[i]
+	});
+var randomImage = function(){
+	i = [Math.floor(Math.random()*imageFiles.length)];
+	photo.image = "images/" + imageFiles[i];
+	};
+	
+	
+var back = Ti.UI.createLabel({
+	text: "Back",
+	label: "back",
+	top: 20,
+	left: 10,
+	font: {fontSize: 12, fontFamily: "ariel", fontColor: "blue"}
+});
+
+
+var galleryLabel = Ti.UI.createLabel({
+	text: " Click For Random Image",
+	label: "image",
+	bottom: 25
+});
+
+galleryWin.add(galleryLabel);
+galleryWin.add(photo);
+
+galleryWin.addEventListener("click", function(event){
+	console.log(event.source.label);
+	if (event.source.label === "image" ){
+		randomImage();
+		}; 
+		if (event.source.label=== "back"){
+			galleryWin.close();
+			} else{
+				
+			}
+});
+

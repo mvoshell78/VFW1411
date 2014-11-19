@@ -1,0 +1,30 @@
+var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imagesFolder.getDirectoryListing();
+
+Ti.UI.setBackgroundColor ("#fff");
+
+var randomImage = function(){
+		i=0;
+		var photo = Ti.UI.createImageView({
+			
+	     	image: imageFiles[i]
+		});
+		
+		
+
+};
+
+
+
+var galleryLabel = Ti.UI.createLabel({
+	text: " Click For Random Image",
+	label: "image"
+});
+galleryWin.add(galleryLabel, randomImage);
+
+galleryWin.addEventListener("click", function(event){
+	console.log(event.source.label);
+	if (event.source.label === "image" ){
+		randomImage();
+	};
+});
