@@ -11,14 +11,6 @@ var randomImage = function(){
 	};
 	
 	
-var back = Ti.UI.createLabel({
-	text: "Back",
-	label: "back",
-	color: "blue",
-	top: 20,
-	left: 10,
-	font: {fontSize: 12, fontFamily: "ariel" }
-});
 
 
 var galleryLabel = Ti.UI.createLabel({
