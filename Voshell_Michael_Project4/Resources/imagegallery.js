@@ -6,8 +6,17 @@ var photo =Ti.UI.createImageView({
 		image: "images/" + imageFiles[i]
 	});
 var randomImage = function(){
+	var current = i;
 	i = [Math.floor(Math.random()*imageFiles.length)];
+	
+	console.log(i,current);
+	
+	if (current === i){
+		randomImage();
+	};
+	
 	photo.image = "images/" + imageFiles[i];
+	
 	};
 	
 	
@@ -23,11 +32,10 @@ galleryWin.add(galleryLabel);
 galleryWin.add(photo);
 
 galleryWin.addEventListener("click", function(event){
-	console.log(event.source.label);
 	if (event.source.label === "image" ){
 		randomImage();
 		}; 
-		if (event.source.label=== "back"){
+		if (event.source.label === "back"){
 			galleryWin.close();
 			} else{
 				
