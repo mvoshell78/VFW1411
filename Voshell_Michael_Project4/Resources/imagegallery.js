@@ -19,7 +19,7 @@ var galleryLabel = Ti.UI.createLabel({
 	bottom: 25
 });
 
-galleryWin.add(galleryLabel,back);
+galleryWin.add(galleryLabel);
 galleryWin.add(photo);
 
 galleryWin.addEventListener("click", function(event){
