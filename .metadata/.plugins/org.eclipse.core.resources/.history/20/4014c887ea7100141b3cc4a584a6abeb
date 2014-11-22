@@ -28,7 +28,7 @@ var optionOneTxt = Ti.UI.createLabel({
 });
 
 var optionTwo = Ti.UI.createView({
-	backgroundColor: ("#7CAC39"),
+	backgroundColor: ("#BB3E55"),
 	height: boxSize,
 	top:  optionOne.height
 });
@@ -41,7 +41,7 @@ var optionTwoTxt = Ti.UI.createLabel({
 });
 
 var optionThree = Ti.UI.createView({
-	backgroundColor: ("#58431D"),
+	backgroundColor: ("#463CB4"),
 	height: boxSize,
 	top: optionOne.height + optionTwo.height
 });
