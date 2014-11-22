@@ -1,0 +1,207 @@
+var turtleInfo = {
+			"turtles":{
+				"headtitle" : "Greg's Tortoises",
+				"footertitle" : "Select a tortise for more info ",
+				"tortoises":
+			[
+				{
+					"names": "Russian Red Foot", 
+				  	"description": "Red-footed Tortoises are from northern South America. They have a dark-colored loaf-shaped back shell with a lighter patch in the middle of each of the scales on the shell, dark limbs with brightly colored scales that range from pale yellow to dark red. They are closely related to the yellow-footed tortoise from the Amazon Basin. They are popularly kept as pets, and over-collection has caused them to be vulnerable to extinction. ",
+					"age": 40,
+					"min": 12,
+					"max": 18,
+					"scale": 5,
+					"image": "images/Redfoot.jpg"
+				},
+				{	"names": "Leopard ", 
+				  	"description": "The Leopard Tortoise is a large and attractively marked tortoise found in the savannas of eastern and southern Africa, from Sudan to the southern Cape. The Leopard tortoise is a grazing species of tortoise that favors semi-arid, thorny to grassland habitats, although some leopard tortoises have been found in rainier areas. In both very hot and very cold weather they may dwell in abandoned fox, jackal, or anteater holes.",
+					"age": 100,
+					"min": 14,
+					"max": 16,
+					"scale": 7,
+					"image": "images/leopard.jpg"
+				},
+				{
+					"names": "African Spurred " ,
+					"description": "The African Spurred Tortoise also called the sulcata tortoise, is a species of tortoise, which inhabits the southern edge of the Sahara desert, in northern Africa. It is the third-largest species of tortoise in the world and the largest species of mainland tortoise not found on an island and the only species in the genus Centrochelys",
+					"age": 150,
+					"min": 24,
+					"max": 36,
+					"scale": 9,
+					"images": "African.jpg"
+
+				}
+			]
+			
+			
+	}
+	};
+
+
+
+
+var getDesc = function(dataSource){
+	var margin = 15;
+	var graphHeight= 20;
+	var graphWidth= 300;
+	var fontSze = 10;
+	var descWin = Ti.UI.createWindow({
+		title: dataSource.title,
+		backgroundColor: "#fff"
+		});	
+	var container = Ti.UI.createScrollView({
+		layout: "horizontal",
+		width: pageWidth,
+		height: pageHeight,// needed to make the page scroll past the bottom of the screen
+		contentWidth: pageWidth,//needed to maintain horizontal view 
+		showVerticalScrollIndicator: true,// needed to show scroll indicator
+		top: 0
+		});
+	var descTxt = Ti.UI.createLabel({
+		text: dataSource.desc,
+		font: {fontSize: 20, fontFamily: "hevetical"},
+		top: 130,
+		left:20
+		});	
+		
+	var graph1 = Ti.UI.createView({
+		height: graphHeight,
+		width: graphWidth,
+		borderRadius: 10,
+		left: 15,
+		top: margin,
+		backgroundColor: " #58431D"
+		});
+		
+	var graph2 = Ti.UI.createView({
+		height: graphHeight,
+		width: graphWidth,
+		borderRadius: 10,
+		left: 15,
+		top: graph1.height + (margin *2),
+		backgroundColor: " #58431D"
+		});
+		
+	var graph3 = Ti.UI.createView({
+		height: graphHeight,
+		width: graphWidth,
+		borderRadius: 10,
+		left: 15,
+		top: graph1.height +graph2.height + (margin * 3),
+		backgroundColor: " #58431D"
+		});
+	
+	
+	var ageGraph = Ti.UI.createView({
+		height: graphHeight,
+		width: dataSource.age * 1.5,
+		borderRadius: 10,
+		left: 15,
+		top: margin,
+		backgroundColor: "#65C144"
+	});
+	
+	var sizeGraph = Ti.UI.createView({
+		height: graphHeight,
+		width: (dataSource.sizeMax * 7),
+		borderRadius: 10,
+		left: 15,
+		top: graph1.height + (margin *2),
+		backgroundColor: " #65C144"
+	});
+
+	var sizeMinGraph = Ti.UI.createView({
+		height: graphHeight,
+		width: (dataSource.sizeMin * 5),
+		borderRadius: 10,
+		left: 15,
+		top: graph1.height + (margin *2),
+		backgroundColor: " #7CAC39"
+	});
+	
+	var friendlyScale = Ti.UI.createView({
+		height: graphHeight,
+		width: (dataSource.scale *30),
+		borderRadius: 10,
+		left: 15,
+		top: graph1.height +graph2.height + (margin * 3),
+		backgroundColor: " #65C144"
+		});
+	
+	var ageTxt = Ti.UI.createLabel({
+		text : "Average age " + dataSource.age +" years ",
+		top: margin + graphHeight,
+		font: {fontSize: fontSze},
+		right: 10
+	});
+	
+	var sizeTxt = Ti.UI.createLabel({
+		text : "Average size " + dataSource.sizeMin + " - " + dataSource.sizeMax + " inches ",
+		top: (margin * 2 )+ (graphHeight *2),
+		font:{fontSize: fontSze},
+		right: 10
+	});
+	
+	var familyFriendly = Ti.UI.createLabel({
+		text : "Family friendly " + dataSource.scale + " out of 10 " ,
+		top: (margin * 3) + (graphHeight * 3),
+		font: {fontSize: fontSze},
+		right: 10
+	});
+	
+	var photo = Ti.UI.createImageView({
+		image: dataSource.image
+	});
+	
+		container.add( descTxt);
+		descWin.add( photo, graph1, ageTxt, graph2, sizeTxt, graph3,familyFriendly, ageGraph, sizeGraph,sizeMinGraph,friendlyScale, container);
+	navWindow.openWindow(descWin);
+
+};	
+
+var tortoiseTable = Ti.UI.createTableView({
+	top: 20
+	
+});
+
+var tortoisesSection = Ti.UI.createTableViewSection({
+	headerTitle: turtleInfo.turtles.headtitle,
+	footerTitle: turtleInfo.turtles.footertitle,
+	});
+for (i = 0, j = turtleInfo.turtles.tortoises.length; i<j; i++){
+	console.log(turtleInfo.turtles.tortoises[i] );
+	var rows = Ti.UI.createTableViewRow({
+		title: turtleInfo.turtles.tortoises[i].names,
+		desc: turtleInfo.turtles.tortoises[i].description,
+		age: turtleInfo.turtles.tortoises[i].age,
+		sizeMin: turtleInfo.turtles.tortoises[i].min,
+		sizeMax: turtleInfo.turtles.tortoises[i].max,
+		scale: turtleInfo.turtles.tortoises[i].scale,
+		image: turtleInfo.turtles.tortoises[i].images,
+		hasChild: true,
+		selectedColor: "green"
+		
+	});
+	var allSection=[tortoisesSection];
+	// hasDetail is IOS Specific
+	if(Ti.Platform.name === "iPhone OS"){
+	rows.hasChild = false;
+	rows.hasDetail = true;
+	}
+	tortoisesSection.add(rows);
+	tortoiseTable.setData(allSection);
+	tortoiseTable.add(tortoisesSection);
+	
+	//rows.addEventListener("click", getDescription);
+};
+infoWin.add(tortoiseTable);
+infoWin.addEventListener("click", function(event){
+	console.log(event.source);
+	getDesc(event.source);
+});
+
+		
+
+
+
+	
