@@ -32,7 +32,7 @@ var galleryLabel = Ti.UI.createLabel({
 galleryWin.add(galleryLabel);
 galleryWin.add(photo);
 
-galleryWin.addEventListener("click", function(event){
+currentWindow.addEventListener("click", function(event){
 	if (event.source.label === "image" ){
 		randomImage();
 		}; 

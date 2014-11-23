@@ -62,8 +62,7 @@ var zipInput = Ti.UI.createTextField({
 });
 var buttonLabel = Ti.UI.createLabel({
 	left: padding,
-	backgroundColor: ("#green"),
-	opacity: ".7",
+	backgroundColor: ("#7CAC39"),
 	borderRadius: 5,
 	borderColor: ("black"),
     top: (margin * 5) + nameInput.height + addressInput.height + stateInput.height + zipInput.height,

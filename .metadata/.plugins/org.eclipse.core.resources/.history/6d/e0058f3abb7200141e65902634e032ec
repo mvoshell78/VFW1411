@@ -5,7 +5,7 @@ Ti.UI.setBackgroundColor ("#fff");
 var photo =Ti.UI.createImageView({
 		image: "images/" + imageFiles[i]
 	});
-
+var currentWindow = Ti.UI.currentWindow;
 var randomImage = function(){
 	var current = i;
 	i = [Math.floor(Math.random()*imageFiles.length)];
@@ -29,10 +29,10 @@ var galleryLabel = Ti.UI.createLabel({
 	bottom: 25
 });
 
-galleryWin.add(galleryLabel);
-galleryWin.add(photo);
+currentWindow.add(galleryLabel);
+currentWindow.add(photo);
 
-galleryWin.addEventListener("click", function(event){
+currentWindow.addEventListener("click", function(event){
 	if (event.source.label === "image" ){
 		randomImage();
 		}; 

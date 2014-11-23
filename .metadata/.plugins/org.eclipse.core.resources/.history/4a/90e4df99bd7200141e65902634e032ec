@@ -5,11 +5,10 @@ var boxSize = ((pageHeight - 50) / 4);
 var titleSize = 60;
 
 var mainWindow = Ti.UI.createWindow({
-	title: "Greg's Tortoises",
+	title: "Mich Voshell",
 	backgroundColor: ("black"),
 	opacity: ".7"
 });
-
 var navWindow = Ti.UI.iOS.createNavigationWindow({
 	window: mainWindow
 });
@@ -53,34 +52,29 @@ var optionThreeTxt = Ti.UI.createLabel({
 	bottom: 5,
 	left: 5
 });
-var courseLabel = Ti.UI.createLabel({
-	text: " VFW 1411 Michael Voshell",
-	color: "white ",
-	top: optionOne.height + optionTwo.height + optionThree.height + 10,
-	font : {fontSize: 13}
-});
+
 
 var galleryWin = Ti.UI.createWindow({
-	backgroundColor: "#E8E8E8",
-	title: "Image Gallery"
-
+	backgroundColor: "#fff",
+	title: "Image Gallery",
+	
 	});
 
 var infoWin = Ti.UI.createWindow({
-	backgroundColor: "#E8E8E8",
-	title: "Tortise Information"
+	backgroundColor: "#fff",
+	title: "Tortise Information",
 	
 });
 
 var contactWin = Ti.UI.createWindow({
-	backgroundColor: "#E8E8E8",
+	backgroundColor: "#58431D",
 	title: "Contact Info",
 	opacity: ".9",
 	
 });
 
 
-mainWindow.add(optionOne, optionTwo, optionThree,courseLabel);
+mainWindow.add(optionOne, optionTwo, optionThree);
 mainWindow.addEventListener("click",function(event){
 	if (event.source.label === "1"){
 		navWindow.openWindow(galleryWin);

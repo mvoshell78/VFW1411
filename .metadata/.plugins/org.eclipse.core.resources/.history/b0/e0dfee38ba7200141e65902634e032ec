@@ -5,12 +5,11 @@ Ti.UI.setBackgroundColor ("#fff");
 var photo =Ti.UI.createImageView({
 		image: "images/" + imageFiles[i]
 	});
-
 var randomImage = function(){
 	var current = i;
 	i = [Math.floor(Math.random()*imageFiles.length)];
 	
-
+	console.log(i,current);
 	
 	if (current === i){
 		randomImage();

@@ -57,30 +57,30 @@ var courseLabel = Ti.UI.createLabel({
 	text: " VFW 1411 Michael Voshell",
 	color: "white ",
 	top: optionOne.height + optionTwo.height + optionThree.height + 10,
-	font : {fontSize: 13}
+	font : {fontSize: 11}
 });
 
 var galleryWin = Ti.UI.createWindow({
-	backgroundColor: "#E8E8E8",
+	backgroundColor: "#4FC478",
 	title: "Image Gallery"
 
 	});
 
 var infoWin = Ti.UI.createWindow({
-	backgroundColor: "#E8E8E8",
+	backgroundColor: "#fff",
 	title: "Tortise Information"
 	
 });
 
 var contactWin = Ti.UI.createWindow({
-	backgroundColor: "#E8E8E8",
+	backgroundColor: "#58431D",
 	title: "Contact Info",
 	opacity: ".9",
 	
 });
 
 
-mainWindow.add(optionOne, optionTwo, optionThree,courseLabel);
+mainWindow.add(optionOne, optionTwo, optionThree);
 mainWindow.addEventListener("click",function(event){
 	if (event.source.label === "1"){
 		navWindow.openWindow(galleryWin);

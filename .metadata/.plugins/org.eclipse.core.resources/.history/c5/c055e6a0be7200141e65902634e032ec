@@ -46,7 +46,7 @@ var getDesc = function(dataSource){
 	var fontSze = 10;
 	var descWin = Ti.UI.createWindow({
 		title: dataSource.title,
-		backgroundColor: "#E8E8E8"
+		backgroundColor: "#fff"
 		});	
 	var container = Ti.UI.createScrollView({
 		layout: "horizontal",
@@ -164,8 +164,7 @@ var getDesc = function(dataSource){
 };	
 
 var tortoiseTable = Ti.UI.createTableView({
-	top: 20,
-	
+	top: 20
 	
 });
 

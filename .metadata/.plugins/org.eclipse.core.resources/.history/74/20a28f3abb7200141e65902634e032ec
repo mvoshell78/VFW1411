@@ -38,7 +38,9 @@ var turtleInfo = {
 	};
 
 
-
+var currentWindow = Ti.UI.currentWindow;
+var pageHeight = Ti.Platform.displayCaps.platformHeight;
+var pageWidth = Ti.Platform.displayCaps.platformWidth;
 var getDesc = function(dataSource){
 	var margin = 15;
 	var graphHeight= 20;
@@ -46,7 +48,7 @@ var getDesc = function(dataSource){
 	var fontSze = 10;
 	var descWin = Ti.UI.createWindow({
 		title: dataSource.title,
-		backgroundColor: "#E8E8E8"
+		backgroundColor: "#fff"
 		});	
 	var container = Ti.UI.createScrollView({
 		layout: "horizontal",
@@ -164,8 +166,7 @@ var getDesc = function(dataSource){
 };	
 
 var tortoiseTable = Ti.UI.createTableView({
-	top: 20,
-	
+	top: 20
 	
 });
 
@@ -199,8 +200,8 @@ for (i = 0, j = turtleInfo.turtles.tortoises.length; i<j; i++){
 	
 	//rows.addEventListener("click", getDescription);
 };
-infoWin.add(tortoiseTable);
-infoWin.addEventListener("click", function(event){
+currentWindow.add(tortoiseTable);
+currentWindow.addEventListener("click", function(event){
 	
 	getDesc(event.source);
 });
