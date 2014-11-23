@@ -1,0 +1,53 @@
+Ti.UI.setBackgroundColor("#fff");
+var margin = 25;
+var padding = 20;
+
+var nameInput = Ti.UI.createTextField({
+	top: margin,
+	borderRadius: 5,
+	borderColor: ("black"),
+	left: padding,
+	height: 25,
+	width: 250,
+	hintText : " Enter you name",
+	backgroundColor: ("#fff")
+});
+
+var addressInput = Ti.UI.createTextField({
+	top: (margin * 2) + nameInput.height,
+	borderRadius: 5,
+	borderColor: ("black"),
+	left: padding,
+	height: 25,
+	width: 250,
+	layout: "vertical",
+	hintText: "Enter your street address",
+	backgroundColor: ("#fff")
+});
+
+var cityInput = Ti.UI.createTextField({
+	top: (margin * 3) + nameInput.height + addressInput.height,
+	borderRadius: 5,
+	borderColor: ("black"),
+	left: padding,
+	height: 25,
+	width: 50,
+	layout: "vertical",
+	hintText: "Enter your city",
+	backgroundColor: ("#fff")
+});
+
+var addressInput = Ti.UI.createTextField({
+	top: (margin * 3) + nameInput.height + addressInput.height,
+	borderRadius: 5,
+	borderColor: ("black"),
+	left: (padding * 2) + cityInput.width,
+	height: 25,
+	width: 250,
+	layout: "vertical",
+	hintText: "Enter your state and zip",
+	backgroundColor: ("#fff")
+});
+
+
+contactWin.add(nameInput, addressInput, cityInput, stateInput);

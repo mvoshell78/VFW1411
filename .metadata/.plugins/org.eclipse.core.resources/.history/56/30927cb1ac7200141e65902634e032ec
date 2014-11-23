@@ -1,0 +1,29 @@
+Ti.UI.setBackgroundColor("#fff");
+var margin = 25;
+var padding = 20;
+
+var nameInput = Ti.UI.createTextField({
+	top: margin,
+	borderRadius: 5,
+	borderColor: ("black"),
+	left: padding,
+	height: 25,
+	width: 250,
+	hintText : " Enter you name",
+	backgroundColor: ("#fff")
+});
+
+var addressInput = Ti.UI.createTextField({
+	top: (margin * 2) + nameInput.height,
+	borderRadius: 5,
+	borderColor: ("black"),
+	left: padding,
+	height: 50,
+	width: 250,
+	hintText: "Enter your street address",
+	backgroundColor: ("#fff")
+});
+
+
+
+contactWin.add(nameInput, nameInputTxt);

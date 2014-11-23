@@ -65,8 +65,9 @@ var infoWin = Ti.UI.createWindow({
 });
 
 var contactWin = Ti.UI.createWindow({
-	backgroundColor: "#fff",
-	title: "Contact Info"
+	backgroundColor: "#58431D",
+	title: "Contact Info",
+	opacity: ".9"
 });
 
 
@@ -87,7 +88,7 @@ mainWindow.addEventListener("click",function(event){
 
 var loadImageGallery = require("imagegallery");
 var loadinfoWin = require("infoWindow");
-
+var loadContactWin = require("contact");
 optionOne.add(optionOneTxt);
 optionTwo.add(optionTwoTxt);
 optionThree.add(optionThreeTxt);

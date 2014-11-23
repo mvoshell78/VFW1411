@@ -1,0 +1,15 @@
+Ti.UI.setBackgroundColor("#fff");
+var margin = 15;
+var padding = 20;
+
+var nameInput = Ti.UI.createTextField({
+	top: margin,
+	borderRadius: 5,
+	left: padding,
+	height: 25,
+	width: 250,
+	hintText: " Enter Your Name",
+	backgroundColor: ("#fff")
+});
+
+contactWin.add(nameInput);
